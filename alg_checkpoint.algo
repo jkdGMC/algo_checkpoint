@@ -41,11 +41,11 @@ BEGIN
   
 
   
-  FOR i FROM 0 TO nb_carac_phrase - 1 STEP step  DO
+  FOR i FROM 0 TO nb_carac_phrase - 1 STEP 1  DO
     
     carac := phrase[i];
     
-    IF (carac = " ") THEN
+    IF (carac = " " OR carac = ".") THEN
       nb_mots := nb_mots + 1;
     ELSE_IF ( (carac = "a") OR (carac = "e") OR (carac = "i") OR (carac = "o") OR (carac = "u") OR (carac = "y") OR (carac = "A") OR (carac = "E") OR (carac = "I") OR (carac = "O") OR (carac = "U") OR (carac = "Y")) THEN
       nb_voyelles := nb_voyelles + 1;
